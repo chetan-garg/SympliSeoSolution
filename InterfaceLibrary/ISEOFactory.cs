@@ -1,4 +1,4 @@
-﻿using SympliSEOSolution.SeoEntities;
+﻿using SympliSEOSolution.SeoEntitiesImplementations;
 using System;
 
 namespace SympliSEOSolution.InterfaceLibrary

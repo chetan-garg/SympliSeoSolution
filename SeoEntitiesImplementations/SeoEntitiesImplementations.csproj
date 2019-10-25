@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <AssemblyName>SympliSEOSolution.SeoEntities</AssemblyName>
-    <RootNamespace>SympliSEOSolution.SeoEntities</RootNamespace>
+    <AssemblyName>SympliSEOSolution.SeoEntitiesImplementations</AssemblyName>
+    <RootNamespace>SympliSEOSolution.SeoEntitiesImplementations</RootNamespace>
   </PropertyGroup>
 
 </Project>

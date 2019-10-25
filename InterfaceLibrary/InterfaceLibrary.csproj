@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SeoEntities\SeoEntitiesImplementations.csproj" />
+    <ProjectReference Include="..\SeoEntitiesImplementations\SeoEntitiesImplementations.csproj" />
   </ItemGroup>
 
 </Project>
