@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HtmlParserUtility
+namespace SympliSEOSolution.Utilities
 {
     public class HtmlParserUtility : IHtmlParserUtility
     {

@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>SympliSEOSolution.Utilities</AssemblyName>
+    <RootNamespace>SympliSEOSolution.Utilities</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj" />
     <ProjectReference Include="..\InterfaceLibrary\InterfaceLibrary.csproj" />
   </ItemGroup>
 
