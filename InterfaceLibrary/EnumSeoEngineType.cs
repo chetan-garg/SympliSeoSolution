@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SympliSEOSolution.SeoEntitiesImplementations
+namespace SympliSEOSolution.InterfaceLibrary
 {
     public enum EnumSeoEngineType
     {

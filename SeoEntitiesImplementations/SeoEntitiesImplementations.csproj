@@ -6,4 +6,8 @@
     <RootNamespace>SympliSEOSolution.SeoEntitiesImplementations</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InterfaceLibrary\InterfaceLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
