@@ -6,6 +6,6 @@ namespace SympliSEOSolution.InterfaceLibrary
 {
     public interface IHtmlParserUtility
     {
-        string ParseAsXml(string html, string tagToRemove);
+        string ParseAsXml(string html, Dictionary<string, string> tagPairToRemove);
     }
 }
