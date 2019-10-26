@@ -9,6 +9,6 @@ namespace SympliSEOSolution.SeoEntitiesImplementations
     {
         public string TextSearched { get; set; }
         public string FilterText { get; set; }
-        public int PositionNumber { get; set; }
+        public string PositionNumbers { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace SympliSEOSolution.Utilities.Tests
             var response = new MockResponse();
 
             requestProcessor.ExecuteWebRequest(Arg.Any<WebRequest>()).Returns(response);
-            var output = searchProcessor.ExecuteSearchUrl(Substitute.For<HttpWebRequest>());
+            var output = searchProcessor.ExecuteSearchRequest(Substitute.For<HttpWebRequest>());
 
             Assert.IsNotNull(output);
         }
@@ -43,7 +43,7 @@ namespace SympliSEOSolution.Utilities.Tests
         {
             var searchProcessor = new ExecuteHttpSearchRequest(logger, requestProcessor);
 
-            var ex = Assert.Throws(typeof(ArgumentNullException), () => searchProcessor.ExecuteSearchUrl(null));
+            var ex = Assert.Throws(typeof(ArgumentNullException), () => searchProcessor.ExecuteSearchRequest(null));
             Assert.IsTrue(ex.Message.StartsWith("Value cannot be null."));
         }
     }

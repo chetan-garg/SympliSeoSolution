@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constants", "Constants\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{EB67034D-1FE4-46FA-8319-28594D2725CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestration", "Orchestration\Orchestration.csproj", "{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSeoEngine", "GoogleSeoEngine\GoogleSeoEngine.csproj", "{16FC45BF-601A-4DF7-92DE-4FFD7B282623}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{EB67034D-1FE4-46FA-8319-28594D2725CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB67034D-1FE4-46FA-8319-28594D2725CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB67034D-1FE4-46FA-8319-28594D2725CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FC45BF-601A-4DF7-92DE-4FFD7B282623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FC45BF-601A-4DF7-92DE-4FFD7B282623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FC45BF-601A-4DF7-92DE-4FFD7B282623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FC45BF-601A-4DF7-92DE-4FFD7B282623}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,5 +9,6 @@ namespace SympliSEOSolution.SeoEntitiesImplementations
     {
         public string SearchText { get; set; }
         public string UrlFilter { get; set; }
+        public int NumberOfRecords { get; set; } = 100;
     }
 }

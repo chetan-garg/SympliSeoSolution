@@ -7,6 +7,6 @@ namespace SympliSEOSolution.InterfaceLibrary
 {
     public interface IExecuteSearch
     {
-        string ExecuteSearchUrl(HttpWebRequest request);
+        string ExecuteSearchRequest(HttpWebRequest request);
     }
 }

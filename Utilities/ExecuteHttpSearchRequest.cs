@@ -18,7 +18,7 @@ namespace SympliSEOSolution.Utilities
             _logger = logger;
             _requestProcessor = requestProcessor;
         }
-        public string ExecuteSearchUrl(HttpWebRequest request)
+        public string ExecuteSearchRequest(HttpWebRequest request)
         {
             if (request == null)
             {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using SympliSEOSolution.Constants;
 using SympliSEOSolution.InterfaceLibrary;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace SympliSEOSolution.Utilities
             try
             {
                 StringBuilder builder = new StringBuilder(baseUrl);
-                builder.AppendFormat("{0}/search/q?={1}", textToSearch);
+                builder.AppendFormat("{1}{2}", StringLiteralConstants.GOOGLE_SEARCH_QUERY, textToSearch);
                 if (numberOfRecords > 0)
                 {
                     builder.AppendFormat("{0}&num={1}", numberOfRecords);

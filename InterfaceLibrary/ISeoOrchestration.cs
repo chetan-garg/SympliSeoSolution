@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SympliSEOSolution.InterfaceLibrary
 {
-    public interface ISeoEngine
+    public interface ISeoOrchestration
     {
-        public ISeoResponse GetSearchResponsePositions(ISeoRequest request);
+        public ISeoResponse GetUrlPositionsFromGoogle(ISeoRequest request);
     }
 }
