@@ -11,20 +11,22 @@ namespace SympliSEOSolution.Utilities
     public class ExecuteHttpSearchRequest : IExecuteSearch
     {
         ILogger _logger;
-        public ExecuteHttpSearchRequest(ILogger logger)
+        IRequestProcessor _requestProcessor;
+
+        public ExecuteHttpSearchRequest(ILogger logger, IRequestProcessor requestProcessor)
         {
             _logger = logger;
+            _requestProcessor = requestProcessor;
         }
-        public string ExecuteSearchUrl(string url)
+        public string ExecuteSearchUrl(HttpWebRequest request)
         {
-            if (string.IsNullOrWhiteSpace(url))
+            if (request == null)
             {
-                _logger.LogError("The url is empty cannot perform the search! {0}", this.GetType());
-                throw new ArgumentNullException("url");
+                _logger.LogError("The request can't be null! {0}", this.GetType());
+                throw new ArgumentNullException();
             }
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            WebRequest.DefaultWebProxy.Credentials = CredentialCache.DefaultNetworkCredentials;
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            
+            using (HttpWebResponse response = (HttpWebResponse)_requestProcessor.ExecuteWebRequest(request))
             {
                 using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.ASCII))
                 {
