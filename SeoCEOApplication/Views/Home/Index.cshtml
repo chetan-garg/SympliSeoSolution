@@ -1,32 +1,14 @@
 ﻿@model SeoCEOApplication.Models.SeoViewModel
-
 @{
+    Layout = "_Layout";
     ViewData["Title"] = "Index";
 }
 
 <h1>GetGoogleSeo</h1>
-
-<p>
-    <label asp-for="@Model.SearchText">Search Text</label>
-    <input asp-for="@Model.SearchText" />
-    <label asp-for="@Model.UrlFilter">Url Filter</label>
-    <input asp-for="@Model.UrlFilter" />
-    <button asp-action="Search" asp-controller="Home">Search</button>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.PositionNumbers)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => Model.PositionNumbers)
-            </td>
-        </tr>
-    </tbody>
-</table>
+<form asp-action="Index" asp-controller="Home" method="post">
+    <p>
+        Search Text : <input asp-for="SearchText" />
+        Url Filter : <input asp-for="UrlFilter" />
+        <button type="submit">Search</button>
+    </p>
+</form>

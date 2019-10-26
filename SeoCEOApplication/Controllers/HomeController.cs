@@ -13,7 +13,7 @@ using SeoCEOApplication.Models;
 
 namespace SeoCEOApplication.Controllers
 {
-    public class HomeController : Controller
+        public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
@@ -35,7 +35,7 @@ namespace SeoCEOApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Search([FromBody] SeoViewModel viewModel)
+        public IActionResult IndexAsync(SeoViewModel viewModel)
         {
             SeoViewModel members = null;
 
@@ -46,25 +46,33 @@ namespace SeoCEOApplication.Controllers
                 client.DefaultRequestHeaders.Accept.Clear();
 
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                var requestJson = new { SearchText = "e-settlements", UrlFilter = "www.sympli.com" };
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
                     RequestUri = new Uri(url),
-                    Content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(requestJson), Encoding.UTF8, "application/json")
+                    Content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(viewModel), Encoding.UTF8, "application/json")
                 };
 
-                var response = await client.SendAsync(request).ConfigureAwait(true);
-                response.EnsureSuccessStatusCode();
+                var response = client.SendAsync(request);
+                response.Wait();
+                //response.();
 
-                var readTask = response.Content.ReadAsAsync<SeoViewModel>();
+                var readTask = response.Result.Content.ReadAsAsync<SeoViewModel>();
                 readTask.Wait();
 
                 members = readTask.Result;
+                members.SearchText = viewModel.SearchText;
+                members.UrlFilter = viewModel.UrlFilter;
+
             }
-            return View(members);
+            return View("Positions", members);
         }
 
+        [HttpGet]
+        public IActionResult PositionsAsync([FromBody] SeoViewModel viewModel)
+        {
+            return View(viewModel);
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
