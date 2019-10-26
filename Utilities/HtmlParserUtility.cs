@@ -28,6 +28,8 @@ namespace SympliSEOSolution.Utilities
                 if (_logger != null) _logger.LogError("The tag to be removed has not been provided.");
                 return string.Empty;
             }
+
+            html = html.Replace("!doctype", "!DOCTYPE");
             foreach (string key in tagPairsToRemove.Keys)
             {
                 string startTagName = key.StartsWith("<") ? key : string.Format("<{0}", key);

@@ -22,7 +22,7 @@ namespace SympliSEOSolution.Constants
                 builder.AppendFormat("{0}, ", position);
             }
             string pos = builder.ToString();
-            if (pos.EndsWith(","))
+            if (pos.EndsWith(", "))
             {
                 response.PositionNumbers = pos.Remove(pos.LastIndexOf(","));
             }

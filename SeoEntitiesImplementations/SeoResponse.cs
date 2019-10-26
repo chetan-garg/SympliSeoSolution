@@ -7,8 +7,6 @@ namespace SympliSEOSolution.SeoEntitiesImplementations
 {
     public class SeoResponse : ISeoResponse
     {
-        public string TextSearched { get; set; }
-        public string FilterText { get; set; }
         public string PositionNumbers { get; set; }
     }
 }

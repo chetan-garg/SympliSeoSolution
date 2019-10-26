@@ -26,10 +26,10 @@ namespace SympliSEOSolution.Utilities
             try
             {
                 StringBuilder builder = new StringBuilder(baseUrl);
-                builder.AppendFormat("{1}{2}", StringLiteralConstants.GOOGLE_SEARCH_QUERY, textToSearch);
+                builder.AppendFormat("{0}{1}", StringLiteralConstants.GOOGLE_SEARCH_QUERY, textToSearch);
                 if (numberOfRecords > 0)
                 {
-                    builder.AppendFormat("{0}&num={1}", numberOfRecords);
+                    builder.AppendFormat("&num={0}", numberOfRecords);
                 }
                 
                 return builder.ToString();

@@ -8,8 +8,8 @@ namespace SympliSEOSolution.Constants
         private static Dictionary<string, string> _tagsToRemove;
 
         public const string DIV_NODES_WITH_HREF = @"//div[@id= 'main']/div[.//a[contains(@href, '/url?q=')]]";
-        public const string GOOGLE_BASE_URL = @"https://www.google.com/";
-        public const string GOOGLE_SEARCH_QUERY = @"/search/q?=";
+        public const string GOOGLE_BASE_URL = @"https://www.google.com";
+        public const string GOOGLE_SEARCH_QUERY = @"/search?q=";
         public static Dictionary<string, string> TagsToRemove
         {
             get

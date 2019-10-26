@@ -24,10 +24,10 @@ namespace SympliSEOSolution.Utilities
             List<int> xpathElements = new List<int>();
             foreach (var item in nodes)
             {
-                var abc = item.Descendants(XName.Get("a")).Any(x => x.Attribute(XName.Get("href")).Value.Contains("www.sympli.com"));
+                var abc = item.Descendants(XName.Get("a")).Any(x => x.Attribute(XName.Get("href")).Value.Contains(url));
                 if (abc)
                 {
-                    xpathElements.Add(nodes.IndexOf(item));
+                    xpathElements.Add(nodes.IndexOf(item) + 1);
                 }
             }
 
