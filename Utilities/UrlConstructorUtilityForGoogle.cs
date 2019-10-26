@@ -21,6 +21,7 @@ namespace SympliSEOSolution.Utilities
             if (string.IsNullOrWhiteSpace(baseUrl) || string.IsNullOrWhiteSpace(textToSearch))
             {
                 _logger.LogError("Base URL and the search text is required for performing the search.");
+                return string.Empty;
             }
 
             try
