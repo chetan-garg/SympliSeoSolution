@@ -23,9 +23,15 @@ namespace GoogleSeoAPI.Controllers
         }
 
         [HttpGet]
-        public string Get(SeoRequest request)
+        public SeoResponse Get([FromBody] SeoRequest request)
         {
-            return _orchester.GetUrlPositionsFromGoogle(request).PositionNumbers;
+            if (request == null)
+            {
+                _logger.LogError("The request object is null. Please check the JSON request.");
+                return null;
+            }
+
+            return (SeoResponse)_orchester.GetUrlPositionsFromGoogle(request);
         }
     }
 }
