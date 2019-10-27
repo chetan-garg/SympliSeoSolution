@@ -21,10 +21,7 @@ namespace SympliSEOSolution.Workers
         {
             XDocument doc = XDocument.Parse(html);
             doc.Root.RemoveAttributes();
-            doc.Descendants()
-   .Attributes()
-   .Where(x => x.IsNamespaceDeclaration)
-   .Remove();
+            doc.Descendants().Attributes().Where(x => x.IsNamespaceDeclaration).Remove();
 
             foreach (var elem in doc.Descendants())
                 elem.Name = elem.Name.LocalName;
