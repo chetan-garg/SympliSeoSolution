@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SeoFactory\SeoFactory.csproj" />
     <ProjectReference Include="..\Utilities\Workers.csproj" />
   </ItemGroup>
 

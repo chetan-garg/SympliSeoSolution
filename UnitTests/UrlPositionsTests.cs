@@ -23,5 +23,15 @@ namespace SympliSEOSolution.Workers.Tests
             Assert.IsNotNull(abc);
             Assert.AreEqual(2, abc.Count);
         }
+
+        [Test()]
+        public void GetBingPositionOfOccurenceTest()
+        {
+            BingUrlPositions positions = new BingUrlPositions(Substitute.For<ILogger>());
+            var abc = positions.GetPositionOfOccurence(html, "www.sympli.com");
+
+            Assert.IsNotNull(abc);
+            Assert.AreEqual(0, abc.Count);
+        }
     }
 }
