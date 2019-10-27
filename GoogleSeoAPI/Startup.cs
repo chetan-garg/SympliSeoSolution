@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +30,7 @@ namespace GoogleSeoAPI
             services.AddTransient<ILogger, Microsoft.Extensions.Logging.Logger<GoogleSeoAPI.Controllers.GoogleSeoController>>();
             services.AddTransient<ILogger, Microsoft.Extensions.Logging.Logger<GoogleSeoAPI.Controllers.MicrosoftSeoController>>();
             SympliSEOSolution.ConfigureDependencies.Configure.ConfigureProjectDependencies(services);
+            services.AddResponseCaching();
             services.AddControllers();
         }
 
@@ -44,7 +46,23 @@ namespace GoogleSeoAPI
 
             app.UseRouting();
 
+            app.UseResponseCaching();
+            
             app.UseAuthorization();
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.GetTypedHeaders().CacheControl =
+                    new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
+                    {
+                        Public = true,
+                        MaxAge = TimeSpan.FromSeconds(3600)
+                    };
+                context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.Vary] =
+                    new string[] { "Accept-Encoding" };
+
+                await next();
+            });
 
             app.UseEndpoints(endpoints =>
             {
