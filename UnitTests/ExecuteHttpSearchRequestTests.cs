@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using SympliSEOSolution.Utilities;
+using SympliSEOSolution.Workers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using System.Net;
 using System.IO;
 
-namespace SympliSEOSolution.Utilities.Tests
+namespace SympliSEOSolution.Workers.Tests
 {
     [TestFixture()]
     public class ExecuteHttpSearchRequestTests

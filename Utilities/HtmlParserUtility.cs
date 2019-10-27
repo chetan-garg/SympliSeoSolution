@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SympliSEOSolution.Utilities
+namespace SympliSEOSolution.Workers
 {
     public class HtmlParserUtility : IHtmlParserUtility
     {
@@ -30,6 +30,7 @@ namespace SympliSEOSolution.Utilities
             }
 
             html = html.Replace("!doctype", "!DOCTYPE");
+            html = html.Replace("&nbsp;", " ");
             foreach (string key in tagPairsToRemove.Keys)
             {
                 string startTagName = key.StartsWith("<") ? key : string.Format("<{0}", key);

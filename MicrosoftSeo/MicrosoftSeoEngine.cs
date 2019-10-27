@@ -1,32 +1,32 @@
 ﻿using IL = SympliSEOSolution.InterfaceLibrary;
 using System;
 using System.Collections.Generic;
+using System.Text;
 using SympliSEOSolution.Constants;
 using System.Net;
 using SympliSEOSolution.InterfaceLibrary;
 
-namespace GoogleSeoEngine
+namespace SympliSEOSolution.MicrosoftSeo
 {
-    public class GoogleSeoEngine : IL.ISeoEngine
+    public class MicrosoftSeoEngine : IL.ISeoEngine
     {
         IL.IExecuteSearch _requestProcessor = null;
         IL.IUrlConstructorUtility _urlConstructor = null;
         IL.IPositionsFactory _positions = null;
         IL.IHtmlParserUtility _parserUtility = null;
 
-        public GoogleSeoEngine(IL.IExecuteSearch requestProcessor, IL.IUrlConstructorUtility urlConstructor, IL.IPositionsFactory positions, IL.IHtmlParserUtility parserUtility)
+        public MicrosoftSeoEngine(IL.IExecuteSearch requestProcessor, IL.IUrlConstructorUtility urlConstructor, IL.IPositionsFactory positions, IL.IHtmlParserUtility parserUtility)
         {
             _requestProcessor = requestProcessor;
             _urlConstructor = urlConstructor;
             _positions = positions;
             _parserUtility = parserUtility;
         }
-
         public IL.ISeoResponse GetSearchResponsePositions(IL.ISeoRequest request)
         {
             if (request != null)
             {
-                var urlToExecute = _urlConstructor.ConstructUrl(StringLiteralConstants.GOOGLE_BASE_URL, request.NumberOfRecords, request.SearchText);
+                var urlToExecute = _urlConstructor.ConstructUrl(StringLiteralConstants.MICROSOFT_BASE_URL, request.NumberOfRecords, request.SearchText);
                 if (!string.IsNullOrWhiteSpace(urlToExecute))
                 {
                     HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(urlToExecute);
@@ -37,10 +37,10 @@ namespace GoogleSeoEngine
                         var filteredHtml = _parserUtility.ParseAsXml(htmlString, StringLiteralConstants.TagsToRemove);
                         if (!string.IsNullOrWhiteSpace(filteredHtml))
                         {
-                            object seoType;
+                            object seoType; 
                             if (Enum.TryParse(typeof(EnumSeoEngineType), request.SeoEngineType, out seoType))
                             {
-                                var position = _positions.GetUrlPositionsImplementation((EnumSeoEngineType)seoType);
+                                var position = _positions.GetUrlPositionsImplementation((EnumSeoEngineType)seoType); 
                                 List<int> positions = position.GetPositionOfOccurence(filteredHtml, request.UrlFilter);
                                 return ResponseConverter.ConvertIntToResponses(positions, request);
                             }

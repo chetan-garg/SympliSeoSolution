@@ -11,9 +11,9 @@
   <ItemGroup>
     <ProjectReference Include="..\GoogleSeoEngine\GoogleSeoEngine.csproj" />
     <ProjectReference Include="..\InterfaceLibrary\InterfaceLibrary.csproj" />
+    <ProjectReference Include="..\IPositionsFactory\PositionsFactory.csproj" />
     <ProjectReference Include="..\Orchestration\Orchestration.csproj" />
     <ProjectReference Include="..\SeoFactory\SeoFactory.csproj" />
-    <ProjectReference Include="..\Utilities\Workers.csproj" />
   </ItemGroup>
 
 </Project>

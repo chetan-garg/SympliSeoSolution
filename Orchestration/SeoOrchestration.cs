@@ -12,14 +12,18 @@ namespace SympliSEOSolution.Orchestration
         {
             _factory = factory;
         }
-        public ISeoResponse GetUrlPositionsFromGoogle(ISeoRequest request)
+        public ISeoResponse GetUrlPositionsFrom(ISeoRequest request)
         {
             if (request != null)
             {
-                var seoEngine = _factory.GetSeoEngine(EnumSeoEngineType.Google);
-                if (seoEngine != null)
+                object seoType;
+                if (Enum.TryParse(typeof(EnumSeoEngineType), request.SeoEngineType, out seoType))
                 {
-                    return seoEngine.GetSearchResponsePositions(request);
+                    var seoEngine = _factory.GetSeoEngine((EnumSeoEngineType) seoType);
+                    if (seoEngine != null)
+                    {
+                        return seoEngine.GetSearchResponsePositions(request);
+                    }
                 }
             }
 

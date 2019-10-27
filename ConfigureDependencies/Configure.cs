@@ -1,11 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using IL = SympliSEOSolution.InterfaceLibrary;
 using SympliSEOSolution.Orchestration;
-using SympliSEOSolution.Utilities;
 using System;
 using GoogleSeoEngine;
-using SeoFactory;
+using SympliSEOSolution.SeoFactory;
 using SympliSEOSolution.SeoEntitiesImplementations;
+using SympliSEOSolution.Workers;
+using SympliSEOSolution.PositionsFactory;
 
 namespace SympliSEOSolution.ConfigureDependencies
 {
@@ -18,6 +19,8 @@ namespace SympliSEOSolution.ConfigureDependencies
             services.AddTransient<IL.IExecuteSearch, ExecuteHttpSearchRequest>();
             services.AddTransient<IL.IHtmlParserUtility, HtmlParserUtility>();
             services.AddTransient<IL.IPositions, UrlPositions>();
+            services.AddTransient<IL.IPositions, BingUrlPositions>();
+            services.AddTransient<IL.IPositionsFactory, PositionsFactory.PositionsFactory>();
             services.AddTransient<IL.ISeoEngine, GoogleSeoEngine.GoogleSeoEngine>();
             services.AddTransient<IL.ISEOFactory, SeoFactory.SeoFactory>();
             services.AddTransient<IL.IUrlConstructorUtility, UrlConstructorUtilityForGoogle>();

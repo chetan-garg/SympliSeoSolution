@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
 using NUnit.Framework;
-using SympliSEOSolution.Utilities;
+using SympliSEOSolution.Workers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SympliSEOSolution.Utilities.Tests
+namespace SympliSEOSolution.Workers.Tests
 {
     [TestFixture()]
     public class HtmlParserUtilityTests

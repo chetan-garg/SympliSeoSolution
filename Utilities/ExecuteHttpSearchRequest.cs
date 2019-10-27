@@ -6,7 +6,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace SympliSEOSolution.Utilities
+namespace SympliSEOSolution.Workers
 {
     public class ExecuteHttpSearchRequest : IExecuteSearch
     {

@@ -2,12 +2,12 @@
 using NSubstitute;
 using NUnit.Framework;
 using SympliSEOSolution.InterfaceLibrary;
-using SympliSEOSolution.Utilities;
+using SympliSEOSolution.Workers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SympliSEOSolution.Utilities.Tests
+namespace SympliSEOSolution.Workers.Tests
 {
     [TestFixture()]
     public class UrlPositionsTests

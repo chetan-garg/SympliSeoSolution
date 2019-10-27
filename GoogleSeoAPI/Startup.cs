@@ -27,6 +27,7 @@ namespace GoogleSeoAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ILogger, Microsoft.Extensions.Logging.Logger<GoogleSeoAPI.Controllers.GoogleSeoController>>();
+            services.AddTransient<ILogger, Microsoft.Extensions.Logging.Logger<GoogleSeoAPI.Controllers.MicrosoftSeoController>>();
             SympliSEOSolution.ConfigureDependencies.Configure.ConfigureProjectDependencies(services);
             services.AddControllers();
         }

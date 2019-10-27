@@ -11,19 +11,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workers", "Utilities\Worker
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constants", "Constants\Constants.csproj", "{51F289BC-92A3-4A05-835F-D73D77FE341B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{EB67034D-1FE4-46FA-8319-28594D2725CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{EB67034D-1FE4-46FA-8319-28594D2725CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestration", "Orchestration\Orchestration.csproj", "{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchestration", "Orchestration\Orchestration.csproj", "{9560AFD4-780C-44A3-A4CE-D2897C7A3FE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSeoEngine", "GoogleSeoEngine\GoogleSeoEngine.csproj", "{16FC45BF-601A-4DF7-92DE-4FFD7B282623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSeoEngine", "GoogleSeoEngine\GoogleSeoEngine.csproj", "{16FC45BF-601A-4DF7-92DE-4FFD7B282623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSeoAPI", "GoogleSeoAPI\GoogleSeoAPI.csproj", "{149C8E6E-D7FC-441D-9C4A-9F1A87A59F63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSeoAPI", "GoogleSeoAPI\GoogleSeoAPI.csproj", "{149C8E6E-D7FC-441D-9C4A-9F1A87A59F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigureDependencies", "ConfigureDependencies\ConfigureDependencies.csproj", "{96A133C0-E415-43CA-8D00-9A4AAFC2B0CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigureDependencies", "ConfigureDependencies\ConfigureDependencies.csproj", "{96A133C0-E415-43CA-8D00-9A4AAFC2B0CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeoFactory", "SeoFactory\SeoFactory.csproj", "{BACC961F-D171-4BF4-A49C-4319A5421F8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeoFactory", "SeoFactory\SeoFactory.csproj", "{BACC961F-D171-4BF4-A49C-4319A5421F8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeoCEOApplication", "SeoCEOApplication\SeoCEOApplication.csproj", "{C07BD2F8-7BFB-41C9-A4C5-45F01BCF1E03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeoCEOApplication", "SeoCEOApplication\SeoCEOApplication.csproj", "{C07BD2F8-7BFB-41C9-A4C5-45F01BCF1E03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftSeo", "MicrosoftSeo\MicrosoftSeo.csproj", "{30CE135A-CC36-42DC-B779-D9C34AA7E0E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositionsFactory", "IPositionsFactory\PositionsFactory.csproj", "{B4DD7C1B-BA63-4819-9AAB-03B45325D3EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{C07BD2F8-7BFB-41C9-A4C5-45F01BCF1E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C07BD2F8-7BFB-41C9-A4C5-45F01BCF1E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C07BD2F8-7BFB-41C9-A4C5-45F01BCF1E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30CE135A-CC36-42DC-B779-D9C34AA7E0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30CE135A-CC36-42DC-B779-D9C34AA7E0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30CE135A-CC36-42DC-B779-D9C34AA7E0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30CE135A-CC36-42DC-B779-D9C34AA7E0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DD7C1B-BA63-4819-9AAB-03B45325D3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DD7C1B-BA63-4819-9AAB-03B45325D3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DD7C1B-BA63-4819-9AAB-03B45325D3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DD7C1B-BA63-4819-9AAB-03B45325D3EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

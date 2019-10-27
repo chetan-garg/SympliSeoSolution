@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>SympliSEOSolution.MicrosoftSeo</AssemblyName>
+    <RootNamespace>SympliSEOSolution.MicrosoftSeo</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoogleSeoEngine\GoogleSeoEngine.csproj" />
+    <ProjectReference Include="..\Constants\Constants.csproj" />
     <ProjectReference Include="..\InterfaceLibrary\InterfaceLibrary.csproj" />
-    <ProjectReference Include="..\MicrosoftSeo\MicrosoftSeo.csproj" />
-    <ProjectReference Include="..\Utilities\Workers.csproj" />
   </ItemGroup>
 
 </Project>

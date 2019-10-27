@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SympliSEOSolution.Utilities
+namespace SympliSEOSolution.Workers
 {
     public class UrlConstructorUtilityForGoogle : IUrlConstructorUtility
     {

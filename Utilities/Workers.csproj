@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <AssemblyName>SympliSEOSolution.Utilities</AssemblyName>
-    <RootNamespace>SympliSEOSolution.Utilities</RootNamespace>
+    <AssemblyName>SympliSEOSolution.Workers</AssemblyName>
+    <RootNamespace>SympliSEOSolution.Workers</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
