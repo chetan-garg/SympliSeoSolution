@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>SympliSEOSolution.MicrosoftSeo</AssemblyName>
+    <RootNamespace>SympliSEOSolution.MicrosoftSeo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj" />
+    <ProjectReference Include="..\InterfaceLibrary\InterfaceLibrary.csproj" />
+  </ItemGroup>
+
+</Project>

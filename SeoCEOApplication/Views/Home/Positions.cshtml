@@ -1,0 +1,36 @@
+﻿@model SeoCEOApplication.Models.SeoViewModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Positions";
+}
+
+<h1>Positions</h1>
+
+<div>
+    <h4>SeoViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SearchText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SearchText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UrlFilter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UrlFilter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PositionNumbers)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PositionNumbers)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to Search</a>
+</div>

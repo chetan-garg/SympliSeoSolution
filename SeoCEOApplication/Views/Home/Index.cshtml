@@ -1,0 +1,21 @@
+﻿@model SeoCEOApplication.Models.SeoViewModel
+@using SympliSEOSolution.InterfaceLibrary;
+@{
+    Layout = "_Layout";
+ ViewData["Title"] = "Index";
+}
+
+<h1>GetGoogleSeo</h1>
+<form asp-action="Index" asp-controller="Home" method="post">
+    <p>
+        <div style="width:auto">
+            Search Text : <input asp-for="SearchText" />
+            Url Filter : <input asp-for="UrlFilter" />
+            @Html.DropDownList("SeoEngineType",
+                        new SelectList(Enum.GetValues(typeof(EnumSeoEngineType))),
+                        "Select Search Engine",
+                        new { @class = "form-control" })
+            <button type="submit">Search</button>
+        </div>
+    </p>
+</form>
