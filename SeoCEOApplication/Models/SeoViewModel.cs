@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SympliSEOSolution.InterfaceLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace SeoCEOApplication.Models
         [Required]
         public string UrlFilter { get; set; }
         public string PositionNumbers { get; set; }
+        public string SeoEngineType { get; set; }
     }
 }

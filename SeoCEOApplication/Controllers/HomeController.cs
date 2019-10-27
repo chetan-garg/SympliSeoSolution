@@ -41,7 +41,15 @@ namespace SeoCEOApplication.Controllers
 
             using (var client = new HttpClient())
             {
-                var url = _configuration["WebApiAddress"];
+                string url = string.Empty;
+                if (viewModel.SeoEngineType == "Google")
+                {
+                    url = _configuration["GoogleWebApiAddress"];
+                }
+                else if (viewModel.SeoEngineType == "Bing")
+                {
+                    url = _configuration["BingWebApiAddress"];
+                }
                 client.BaseAddress = new Uri(url);
                 client.DefaultRequestHeaders.Accept.Clear();
 
